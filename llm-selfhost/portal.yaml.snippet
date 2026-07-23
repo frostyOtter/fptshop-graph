@@ -1,0 +1,8 @@
+# Append this entry under `applications:` in /etc/portal.yaml,
+# then run: supervisorctl restart caddy
+Qwen LLM:
+  hostname: localhost
+  external_port: 10100   # pick any free external port (see: vast-capabilities | jq '.instance.open_ports')
+  internal_port: 18000   # must match --port in vllm-qwen.sh
+  open_path: /v1/models
+  name: Qwen LLM
